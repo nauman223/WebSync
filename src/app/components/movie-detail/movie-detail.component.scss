@@ -1,0 +1,28 @@
+.heading {
+  font-size: 24px;
+}
+.h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+.img {
+  width: 100%;
+}
+.detail {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.butn {
+  border: 1px solid #b5a1a1;
+  border-radius: 4px;
+  padding: 1px 15px;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+.butn:hover {
+  text-decoration: none;
+  background-color: rgba(209, 209, 209, 0.426);
+}

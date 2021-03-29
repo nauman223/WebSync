@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <br>
+            <h1 class="heading">
+                Movie Listings @ GV Cinema
+            </h1>
+            <br>
+            <input type="text" (keyup)="onSearchFilter($event)" placeholder="Search Movies..." class="inpt">
+
+            <br>
+            <hr>
+
+            <h2 class="h2">
+                Popular Movies this month
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+
+
+        <div class="col-md-3 mb-3" *ngFor="let movies of moviesList">
+            <img class="img pointer" [routerLink]="['/movie_detail', movies.id]"
+                src="https://cdn.shopify.com/s/files/1/0057/3728/3618/products/minions_the_rise_of_gru_xlg_480x.progressive.jpg?v=1582300382"
+                alt="">
+            <!-- <img src="{{movies.imgPath}}" alt=""> -->
+            <h2 class="h2 pointer" [routerLink]="['/movie_detail', movies.id]">
+                {{movies.name}}
+            </h2>
+            <p class="mins">
+                {{movies.duration}} mins
+            </p>
+            <p class="mins">
+                User Rating: {{movies.userRating}}
+            </p>
+        </div>
+
+    </div>
+
+</div>

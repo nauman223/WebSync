@@ -1,0 +1,31 @@
+.heading {
+  font-size: 24px;
+}
+.inpt {
+  font-size: 14px;
+  padding: 5px 15px;
+  width: 200px;
+  border: 1px solid #aba5a5;
+  border-radius: 5px;
+}
+input:focus{
+    outline: 0px;
+}
+.h2{
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+.mins{
+    font-size: 16px;
+    color: #6f6666;
+}
+.img{
+    width: 100%;
+}
+.pointer{
+   cursor: pointer;
+}
+.pointer:hover{
+  color: #3c4466;
+}
