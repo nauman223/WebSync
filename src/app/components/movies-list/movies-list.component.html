@@ -1,41 +1,36 @@
 <div class="container">
-    <div class="row">
-        <div class="col-12">
-            <br>
-            <h1 class="heading">
-                Movie Listings @ GV Cinema
-            </h1>
-            <br>
-            <input type="text" (keyup)="onSearchFilter($event)" placeholder="Search Movies..." class="inpt">
+    <form id="contact" action="" method="post">
+        <h3>Post Data</h3>
+        <fieldset>
+            <input placeholder="Id" type="text" name="1" [(ngModel)]="submiteddData.id"  autofocus>
+        </fieldset>
+        <fieldset>
+            <input placeholder="Customer Id" type="text" name="1" [(ngModel)]="submiteddData.customer_id"  >
+        </fieldset>
+        <fieldset>
+            <input placeholder="Name" type="text" name="2" [(ngModel)]="submiteddData.name"  >
+        </fieldset>
+        <fieldset>
+            <input placeholder="street" type="email" name="3" [(ngModel)]="submiteddData.street" >
+        </fieldset>
+        <fieldset>
+            <input placeholder="postal_code" type="tel" name="4" [(ngModel)]="submiteddData.postal_code" >
+        </fieldset>
+        <fieldset>
+            <input placeholder="city" type="url" name="5" [(ngModel)]="submiteddData.city">
+        </fieldset>
+        <fieldset>
+            <input placeholder="start_date" type="url" name="6" [(ngModel)]="submiteddData.start_date">
+        </fieldset>
+        <fieldset>
+            <input placeholder="end_date" type="url" name="7" [(ngModel)]="submiteddData.end_date">
+        </fieldset>
+        <fieldset>
+            <textarea placeholder="description" name="8" [(ngModel)]="submiteddData.description"></textarea>
+        </fieldset>
+        <fieldset>
+            <button name="submit" (click)="submitData()" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+        </fieldset>
 
-            <br>
-            <hr>
-
-            <h2 class="h2">
-                Popular Movies this month
-            </h2>
-        </div>
-    </div>
-
-    <div class="row">
-
-
-        <div class="col-md-3 mb-3" *ngFor="let movies of moviesList">
-            <img class="img pointer" [routerLink]="['/movie_detail', movies.id]"
-                src="https://cdn.shopify.com/s/files/1/0057/3728/3618/products/minions_the_rise_of_gru_xlg_480x.progressive.jpg?v=1582300382"
-                alt="">
-            <!-- <img src="{{movies.imgPath}}" alt=""> -->
-            <h2 class="h2 pointer" [routerLink]="['/movie_detail', movies.id]">
-                {{movies.name}}
-            </h2>
-            <p class="mins">
-                {{movies.duration}} mins
-            </p>
-            <p class="mins">
-                User Rating: {{movies.userRating}}
-            </p>
-        </div>
-
-    </div>
-
+    </form>
 </div>
